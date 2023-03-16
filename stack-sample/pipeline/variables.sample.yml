@@ -2,7 +2,7 @@ env: ($ environment $)
 project: ($ project $)
 customer: ($ organization_canonical $)
 
-git_ssh_key: ((ssh_key.ssh_key))
+git_ssh_key: ((ssh_step-by-step.ssh_key))
 
 # Code repo configuration
 code_git_public_repository: https://github.com/cycloid-community-catalog/docs-step-by-step-stack.git
@@ -14,10 +14,14 @@ config_git_branch: config
 stack_git_branch: stacks
 
 # Aws access to use inside the pipeline
-aws_access_key: ((aws-cycloid.access_key))
-aws_secret_key: ((aws-cycloid.secret_key))
-aws_default_region: us-east-2
+aws_access_key: ((aws_step-by-step.access_key))
+aws_secret_key: ((aws_step-by-step.secret_key))
+aws_default_region: eu-west-1
 
 # Terraform tfstate storage Configuration
 terraform_storage_bucket_name: ($ organization_canonical $)-terraform-remote-state
 terraform_storage_bucket_path: ($ project $)
+
+# Cycloid events configuration
+api_key: ((cycloid-api-key.apikey))
+api_url: https://http-api.cycloid.io

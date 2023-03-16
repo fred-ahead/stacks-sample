@@ -12,3 +12,5 @@ aws_secret_key: ((aws-cycloid.secret_key))
 aws_default_region: us-east-2
 terraform_storage_bucket_name: ahead-terraform-remote-state
 terraform_storage_bucket_path: snowy
+api_key: ((cycloid-api-key.apikey))
+api_url: 'https://http-api.cycloid.io'
